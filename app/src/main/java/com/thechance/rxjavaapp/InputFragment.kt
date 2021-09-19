@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 
 class InputFragment :BaseFragment<FragmentInputBinding>() {
-    val outputFragment=OutputFragment()
+    private val outputFragment=OutputFragment()
     override val LOG_TAG: String
             get() = javaClass.simpleName
         override val bindingInflater: (LayoutInflater) -> FragmentInputBinding = FragmentInputBinding::inflate
