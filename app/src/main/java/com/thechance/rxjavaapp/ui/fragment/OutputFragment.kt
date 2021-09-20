@@ -1,6 +1,7 @@
 package com.thechance.rxjavaapp.ui.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import com.thechance.rxjavaapp.util.Constant
 import com.thechance.rxjavaapp.databinding.FragmentOutputBinding

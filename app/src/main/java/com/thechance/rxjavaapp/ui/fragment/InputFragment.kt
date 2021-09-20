@@ -2,6 +2,7 @@ package com.thechance.rxjavaapp.ui.fragment
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.core.widget.doOnTextChanged
 
@@ -49,25 +50,12 @@ class InputFragment : BaseFragment<FragmentInputBinding>() {
     }
     private fun nextValue(next: String) {
         communicator.transferData(next)
-   /*     val bundle = Bundle()
-        bundle.putString(Constant.KEY,next)
-        outputFragment.arguments= bundle
-        sendData()
-        outputFragment.binding?.showText?.text = next*/
+
         //Log.v(LOG_TAG, "~~~~~~~~~~~~~~~~~~\nDATA PASSED TO FRAGMENT :$next\n~~~~~~~~~~~~~~~~~~")
 
     }
 
-    /*    //send the data to the output fragment
-    private fun sendData() {
-        activity?.supportFragmentManager!!.beginTransaction()
-            .remove(outputFragment)
-            .add(R.id.fragment_output, outputFragment)
-            .commit()
-       // Log.v(LOG_TAG, "~~~~~~~~~~~~~~~~~~\n FRAGMENT IS CHANGED\n~~~~~~~~~~~~~~~~~~")
 
-
-    }*/
     private fun onError(e:Throwable){
         println("ERROR")
     }
