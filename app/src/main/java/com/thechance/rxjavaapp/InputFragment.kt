@@ -2,6 +2,7 @@ package com.thechance.rxjavaapp
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 
 import androidx.core.widget.doOnTextChanged
@@ -10,6 +11,7 @@ import io.reactivex.rxjava3.annotations.NonNull
 import io.reactivex.rxjava3.observables.ConnectableObservable
 
 import io.reactivex.rxjava3.subjects.PublishSubject
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 
@@ -47,17 +49,21 @@ class InputFragment :BaseFragment<FragmentInputBinding>() {
         bundle.putString(Constant.KEY,next)
         outputFragment.arguments= bundle
         sendData()
-       // Log.v(LOG_TAG, "~~~~~~~~~~~~~~~~~~\nDATA PASSED TO FRAGMENT :$next\n~~~~~~~~~~~~~~~~~~")
+        outputFragment.binding?.showText?.text = next
+        //Log.v(LOG_TAG, "~~~~~~~~~~~~~~~~~~\nDATA PASSED TO FRAGMENT :$next\n~~~~~~~~~~~~~~~~~~")
 
     }
 
+        //send the data to the output fragment
     private fun sendData() {
         activity?.supportFragmentManager!!.beginTransaction()
-            .add(R.id.fragment_output,outputFragment)
-            .addToBackStack(null)
+            .remove(outputFragment)
+            .add(R.id.fragment_output, outputFragment)
             .commit()
-    }
+       // Log.v(LOG_TAG, "~~~~~~~~~~~~~~~~~~\n FRAGMENT IS CHANGED\n~~~~~~~~~~~~~~~~~~")
 
+
+    }
     private fun onError(e:Throwable){
         println("ERROR")
     }

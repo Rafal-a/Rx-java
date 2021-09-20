@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="8dp"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:background="@drawable/edit_text_shape"
         app:layout_constraintBottom_toBottomOf="parent"
