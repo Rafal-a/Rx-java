@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OutputFragment">
+    tools:context=".ui.fragment.OutputFragment">
 
 
     <TextView
         android:id="@+id/show_text"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/teal_700"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@color/red_velvet"
         android:gravity="center"
-        android:hint="Text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

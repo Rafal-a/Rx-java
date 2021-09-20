@@ -1,22 +1,22 @@
-package com.thechance.rxjavaapp
+package com.thechance.rxjavaapp.ui.fragment
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-
 import androidx.core.widget.doOnTextChanged
+
+import com.thechance.rxjavaapp.util.Constant
+import com.thechance.rxjavaapp.R
 import com.thechance.rxjavaapp.databinding.FragmentInputBinding
 import io.reactivex.rxjava3.annotations.NonNull
 import io.reactivex.rxjava3.observables.ConnectableObservable
 
 import io.reactivex.rxjava3.subjects.PublishSubject
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 
-class InputFragment :BaseFragment<FragmentInputBinding>() {
-    private val outputFragment=OutputFragment()
+class InputFragment : BaseFragment<FragmentInputBinding>() {
+    private val outputFragment= OutputFragment()
     override val LOG_TAG: String
             get() = javaClass.simpleName
         override val bindingInflater: (LayoutInflater) -> FragmentInputBinding = FragmentInputBinding::inflate

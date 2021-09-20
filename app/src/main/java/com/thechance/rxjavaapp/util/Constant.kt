@@ -1,4 +1,4 @@
-package com.thechance.rxjavaapp
+package com.thechance.rxjavaapp.util
 
 object Constant {
     const val KEY = "value"

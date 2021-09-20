@@ -1,15 +1,8 @@
-package com.thechance.rxjavaapp
+package com.thechance.rxjavaapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.EditText
-import androidx.annotation.IntegerRes
-import androidx.core.widget.doOnTextChanged
 import com.thechance.rxjavaapp.databinding.ActivityMainBinding
-import io.reactivex.rxjava3.annotations.NonNull
-import io.reactivex.rxjava3.core.Observable
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
